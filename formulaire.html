@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div style="height: 100vh; background-image: url(https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80); background-size: cover; background-position: center;" class="position-relative w-100">
+        <div class="position-absolute text-white d-flex flex-column align-items-start justify-content-center" style="top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0,0,0,.7);">
+          <div class="container">
+            <div class="col-md-6">
+              <span style="color: #bbb;" class="text-uppercase">Formulaire Évaluation des Employés
+            </span>
+              <h1 class="mb-4 mt-2 display-4 font-weight-bold">Optimisez <span style="color: #9B5DE5;">Performance de Votre Équipe</span></h1>
+              <p  style="color: #bbb;">Accédez à un outil d'évaluation complet pour valoriser le potentiel de chaque employé et stimuler la réussite collective.</p>
+              <a href="#form" class="p-2 rounded-1" style="text-decoration: none; background-color: #9B5DE5; color: white;">Commencer dès maintenant</a>
+            </div>
+          </div>
+        </div>
+      </div> 
+    
+    <div class="container py-lg-5 col-lg-8 offset-lg-2">
+        <form id="form" action="" class="border border-black rounded-5 p-lg-4 width-70">
+            <h1 class="font-weight-bold text-center" style="color: #9B5DE5; font-size: 47px;">Formulaire d’Évaluation des Employés</h1>
+            <p class="text-center" style="font-size: 15px;">Ce formulaire vise à recueillir des évaluations sur les performances, compétences et satisfaction des employés. Merci de le remplir avec précision pour renforcer notre équipe.</p>
+            <div id="form-one" class="form-step form-step-active">  
+            <div class="mb-3 py-3" class="input-group">
+                <label for="nom" class="form-label" style="font-size: 1.3rem;" >Nom</label>
+                <input class="form-control"type="text" name="nom" id="nom" placeholder="Merci de tapez votre nom ici">
+                <span class="text-danger error-message"></span>
+            </div>
+            <div class="mb-3" class="input-group">
+                <label for="age" class="form-label" style="font-size: 1.3rem;" >Age</label>
+                <input class="form-control" type="text" name="age" id="age" placeholder="Merci de tapez votre age ici">
+                <span class="text-danger error-message"></span>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a href="#form" id="btn-suivant" class="bg-primary text-bg-success p-1 rounded btn-next" style="text-decoration: none; font-size: 1.4rem;">Suivant</a>
+            </div>
+            </div>
+        <div id="form-two" class="form-step ">  
+                <div class="mb-3 py-3" class="input-group">
+                    <label for="nom" class="form-label" style="font-size: 1.3rem;" >E-mail</label>
+                    <input class="form-control"type="email" name="email" id="email" placeholder="Merci de tapez votre E-mail ici">
+                    <span class="text-danger error-message"></span>
+                </div>
+                <div class="mb-3" class="input-group">
+                    <label for="age" class="form-label" style="font-size: 1.3rem;" >Numéro de téléphone</label>
+                    <input class="form-control" type="text" name="age" id="telephone" placeholder="merci de tapez votre numéro de téléphone ici">
+                    <span class="text-danger error-message"></span>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <a href="#form" class=" bg-danger text-bg-success p-1 rounded btn-prev" style="text-decoration: none; font-size: 1.4rem;">Précédent</a>
+                    <a href="#form" class=" bg-primary text-bg-success p-1 rounded btn-next" style="text-decoration: none; font-size: 1.4rem;" id="btn-suivant-contact">Suivant</a>
+                </div>
+                </div>
+            <div id="form-three" class="form-step ">  
+                    <div class="mb-3 py-3" class="input-group">
+                        <label for="Commentaire" class="form-label" style="font-size: 1.3rem;">Commentaire Satisfaction</label>
+                        <textarea id="commentaire" name="commentaire" rows="4" cols="50" placeholder="Merci de partager votre retour d’expérience, vos impressions, et toute suggestion pour améliorer notre service."></textarea>
+                        <span class="text-danger error-message"></span>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between">
+                        <a href="#form" class=" bg-danger text-bg-success p-1 rounded btn-prev" style="text-decoration: none; font-size: 1.4rem;">Précédent</a>
+                        <a href="userinfo.html" class="bg-success text-bg-success p-1 rounded btn-next" style="text-decoration: none; font-size: 1.4rem;" id="btn-submit">Submit</a>
+                    </div>
+                    </div>
+        </form>
+    </div>
+   
+    <script src="dist/js/jquery-3.7.1.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
