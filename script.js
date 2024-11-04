@@ -29,7 +29,6 @@ btnSuivant.addEventListener("click", ()=>{
                  localStorage.setItem("userNameAndAge", JSON.stringify(userNameAndAge))
     formStepsNumber++;
     updateFormSteps();
-    updateProgress();
         }
 } )
 
@@ -42,7 +41,6 @@ btnSuivantTwo.addEventListener("click", ()=>{
          localStorage.setItem("userNumAndemail", JSON.stringify(userNumAndemail))
 formStepsNumber++;
 updateFormSteps();
-updateProgress();
 }
 })
 
@@ -54,7 +52,6 @@ btnSubmit.addEventListener("click", ()=>{
          localStorage.setItem("userSatisfaction", JSON.stringify(userSatisfaction))
 formStepsNumber++;
 updateFormSteps();
-updateProgress();
 }
 })
 
@@ -63,7 +60,6 @@ prevBtns.forEach((btn)=>{
     btn.addEventListener("click",()=>{
     formStepsNumber--;
     updateFormSteps();
-    updateProgress();
     });
 });
 
@@ -75,17 +71,6 @@ function updateFormSteps(){
     formSteps[formStepsNumber].classList.add("form-step-active");
 }
 
-function updateProgress(){
-    progressSteps.forEach((progressStep, idx) => {
-        if(idx < formStepsNumber + 1){
-            progressStep.classList.add('progress-step-active')
-            
-        }
-        else{
-            progressStep.classList.remove('progress-step-active');
-        }
-    });
-}
 
 function validateFormStep() {
     let isValid = true;
@@ -109,7 +94,7 @@ function validateFormStep() {
 
         if (input.name === "age" && input.value)  {
             const age = parseInt(input.value, 10);
-            if (isNaN(age) || age <= 0) {
+            if (isNaN(age) || age <= 18) {
                 isValid = false;
                 if (errorSpan) {
                     errorSpan.textContent = "Veuillez entrer un âge valide.";
